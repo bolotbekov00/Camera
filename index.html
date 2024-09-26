@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Photo Capture</title>
+    <!-- Materialize CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="grey lighten-4">
+    <div class="container center">
+      <h1 class="header text-darken-4">Camera Photo Capture</h1>
+
+      <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <div class="video-container card">
+            <video id="video" class="responsive-video" autoplay></video>
+          </div>
+
+          <button
+            id="capture"
+            class="btn waves-effect waves-light blue lighten-1"
+          >
+            Сделать фото
+          </button>
+
+          <canvas
+            id="canvas"
+            width="640"
+            height="480"
+            style="display: none"
+          ></canvas>
+
+          <div class="photo-preview my-4 card">
+            <img id="photo" src="" alt="Ваше фото" class="responsive-img" />
+          </div>
+
+          <button
+            id="savePhoto"
+            class="btn waves-effect waves-light green lighten-1"
+          >
+            Сохранить фото
+          </button>
+        </div>
+      </div>
+      <button
+        id="toggleFlash"
+        class="btn waves-effect waves-light green lighten-1"
+      >
+        Фонарки
+      </button>
+
+      <button
+        id="toggleCamera"
+        class="btn waves-effect waves-light green lighten-1"
+      >
+        Переключить камеру
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
